@@ -326,10 +326,10 @@ Resources:
   #
   # SSL Certificate
   #
-  SSLCert:
-    Type: AWS::CertificateManager::Certificate
-    Properties:
-      DomainName: !Ref website
+  #SSLCert:
+  #  Type: AWS::CertificateManager::Certificate
+  #  Properties:
+  #    DomainName: !Ref website
 
   #
   # CloudFront Distribution
@@ -422,5 +422,5 @@ Resources:
           ViewerProtocolPolicy: redirect-to-https
         PriceClass: PriceClass_All
         ViewerCertificate:
-          AcmCertificateArn: !Ref SSLCert
+          AcmCertificateArn: arn:123123123
           SslSupportMethod: sni-only
