@@ -6,10 +6,6 @@ WORKDIR /build
 
 # install dependencies (highly cacheable)
 COPY package.json /build/package.json
-RUN git clone git://github.com/http-auth/http-auth.git
-RUN cd http-auth
-RUN npm install --production
-RUN cd ..
 RUN npm install --production
 
 # add source code
